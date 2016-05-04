@@ -1,0 +1,13 @@
+from splinter import Browser
+browser = Browser()
+browser.visit('https://airmethods.etq.com/reliance_prod/reliance')
+browser.fill('ETQ$LOGIN_USERNAME','jbean')
+browser.fill('ETQ$LOGIN_PASSWORD','Sh3 is mine')
+button = browser.find_by_name('login')
+button.click()
+li = browser.find_by_text("Reporting")
+li.click()
+li = browser.find_by_text("New Document")
+li.click()
+li = browser.find_by_text("AIDMOR")
+li.click()
